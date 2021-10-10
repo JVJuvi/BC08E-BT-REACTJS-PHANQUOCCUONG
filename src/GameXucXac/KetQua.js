@@ -1,14 +1,14 @@
-import { map } from 'async';
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
 
 class KetQua extends Component {
     render() {
+        let{taiXiu,soBanThang,tongSoBanChoi} = this.props.GameXucXacReducer;
         return (
             <div>
-                <h1 className="game-choise">Bạn chọn: <span>{this.props.taiXiu ? 'Tài' : 'Xỉu'}</span></h1>
-                <h1 className="game-core">Số bàn thắng: <span>{this.props.soBanThang}</span></h1>
-                <h1 className="game-goal">Tổng số bàn chơi <span>{this.props.tongSoBanChoi}</span></h1>
+                <h1>Bạn chọn: <span className="game-choise">{taiXiu ? 'Tài' : 'Xỉu'}</span></h1>
+                <h1>Số bàn thắng: <span className="game-core"></span>{soBanThang}</h1>
+                <h1>Tổng số bàn chơi: <span className="game-goal"></span>{tongSoBanChoi}</h1>
             </div>
         )
     }
@@ -16,11 +16,9 @@ class KetQua extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        taiXiu: state.GameXucXacReducer.taiXiu,
-        soBanThang: state.GameXucXacReducer.soBanThang,
-        tongSoBanChoi: state.GameXucXacReducer.tongSoBanChoi
+        GameXucXacReducer: state.GameXucXacReducer
     }
 }
 
-export default connect(mapStateToProps,null)(KetQua)
+export default connect(mapStateToProps)(KetQua)
 

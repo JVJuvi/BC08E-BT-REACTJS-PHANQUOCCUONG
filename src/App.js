@@ -1,10 +1,14 @@
-import GameXucXac from "./GameXucXac/font/GameXucXac";
+// import GameXucXac from "./GameXucXac/GameXucXac";
+
+import GameBauCua from "./GameBauCua/GameBauCua";
+
 
 
 function App() {
   return (
     <div className="App">
-      <GameXucXac />
+      {/* <GameXucXac /> */}
+      <GameBauCua />
     </div>
   );
 }

@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'font-game';
-    src: url(./Pony.ttf);
+    src: url(./font/Pony.ttf)
 }
 
-.game {
-    background-image: url(./image/bgGame.png);
+.gameXucXac {
+    background-image: url(./assets/bgGame.png);
     width: 100%;
     height: 100%;
     position: fixed;
     font-family: font-game;
 }
-.btnGame {
+.btnGameXucXac {
     width: 200px;
     height: 200px;
     font-size: 50px;
@@ -18,4 +18,13 @@
     color: #fff;
     border: 5px solid rgb(82, 232, 98);
     border-radius: 10px;
+}
+.game-choise {
+    color: green;
+}
+.game-core {
+    color: red;
+}
+.game-goal {
+    color: blue;
 }
